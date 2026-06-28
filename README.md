@@ -1,10 +1,7 @@
-# lead-pipeline-mutator
-This project demonstrates how Python handles memory management and object mutability through a dynamic queue tracking script. By utilizing the .pop(0) method inside an isolated function, the script extracts the first element of a list while directly altering the parent array's state. The codebase serves as a clear architectural example of how passing lists by reference can cause permanent, global data modifications across an execution environment.
-
-
-In-Place Mutation: The .pop(0) method shifts the entire array in memory by extracting the target index and instantly shrinking the dataset's length.
-
-Pass-by-Reference Behavior: Python does not duplicate lists when they are passed into a function, meaning any structural modifications made inside the block will permanently impact the global variable.
-
-State Preservation: To prevent a function from mutating your master dataset, you must explicitly pass a duplicate of the array using the .copy() method.
 # ec2-s3-loop
+
+## This Python script manages and evaluates the provisioning performance of mock AWS infrastructure assets. It begins by defining an `aws_sheet` function that utilizes `zip()` and `enumerate()` to pair and print the names of servers and S3 buckets side-by-side in a numbered list. 
+
+## After displaying the assets, the program prompts the user to input an average spin-up time for an EC2 instance, casting the input into an integer for evaluation. This numerical value is processed through an `if/elif` conditional block to output a performance rating based on a target threshold of 60 seconds. 
+
+## Finally, the script updates each individual server dictionary with a new `"spin_time"` key-value pair and loops through the updated list to print each server alongside its recorded timing value.
